@@ -58,10 +58,11 @@ int partition(int *array, int start, int end, size_t size)
  */
 void sort_recursive(int *array, int start, int end, size_t size)
 {
+	int pi;
+
 	if (start < end)
 	{
-		int pi = partition(array, start, end, size);
-
+		pi = partition(array, start, end, size);
 		sort_recursive(array, start, pi - 1, size);
 		sort_recursive(array, pi + 1, end, size);
 	}
